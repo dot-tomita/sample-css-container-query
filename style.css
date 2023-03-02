@@ -1,0 +1,76 @@
+.wrapper {
+  padding-bottom: 100px;
+}
+
+.container-base {
+  margin: 0 auto 50px;
+  background-color: tomato;
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.container {
+  container-name: yoko;
+  container-type: inline-size;
+  resize: horizontal;
+  overflow: auto;
+}
+.not-container {
+  resize: horizontal;
+  overflow: auto;
+}
+.container-vertical {
+  container-name: tateyoko;
+  container-type: size;
+  resize: both;
+  overflow: auto;
+}
+.container-named {
+  container-name: named;
+  container-type: size;
+  resize: both;
+  overflow: auto;
+}
+
+.box {
+  background-color: #6cf;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: all 0.1s ease-out;
+}
+
+@container (width < 300px) {
+  .box {
+    background-color: #ccc;
+  }
+}
+@container (width > 800px) {
+  .box {
+    background-color: yellow;
+  }
+}
+@container (height < 200px) {
+  .box {
+    color: #fff;
+  }
+}
+@container (height > 400px) {
+  .box {
+    color: blue;
+  }
+}
+
+@container named (width > 600px) {
+  .box {
+    transform: rotate(180deg);
+  }
+}

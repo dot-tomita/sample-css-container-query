@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@container sample</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>@containerのサンプル</h1>
+      <div class="container-base container">
+        <div class="box">
+          赤枠の.containerを水平方向にリサイズすると色が変わるよ
+        </div>
+      </div>
+      <div class="container-base not-container">
+        <div class="box">
+          こっちの親要素はcontainerの指定がされてないので変わらないよ
+        </div>
+      </div>
+      <div class="container-base container-vertical">
+        <div class="box">
+          垂直方向もできるよただし垂直方向のみの指定はできないよ
+        </div>
+      </div>
+
+      <div class="container-base container-named">
+        <div class="box">
+          @container 〇〇 (条件)
+          でcontainerの名前を指定すればその子要素のみに反映できる
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
